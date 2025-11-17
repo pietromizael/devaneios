@@ -26,8 +26,7 @@ interface Book {
 const books: Book[] = [
   {
     id: "1", // Mantive o ID '1' para o seu livro, mas você pode mudar se tiver mais.
-    title:
-      "Mais Esperto Que O Diabo - Livro De Bolso: O Mistério Revelado Da Liberdad...",
+    title: "Mais Esperto Que O Diabo",
     author: "Napoleon Hill",
     description:
       'Neste livro extraordinário, Napoleon Hill revela os segredos que o impediam de alcançar a liberdade pessoal, oferecendo uma entrevista exclusiva com o "Diabo" que ficou oculta por décadas. Uma obra essencial para quem busca superar medos e limitações.',
@@ -40,6 +39,38 @@ const books: Book[] = [
     imageUrl: "/images/mais-esperto-que-o-diabo.png", // URL da sua imagem
     affiliateLink: "https://mercadolivre.com/sec/1bCtE4x", // Seu link de afiliado
     price: "R$ 19", // O preço que você mencionou
+  },
+  {
+    id: "2", // Novo ID para este livro
+    title: "Em Busca De Sentido: Um Psicólogo No Campo De Concentração",
+    author: "Viktor E. Frankl",
+    description:
+      "Relato emocionante e profundo do psiquiatra Viktor Frankl sobre sua experiência nos campos de concentração nazistas. Uma obra que explora a busca por um propósito na vida, mesmo nas circunstâncias mais extremas, e a força do espírito humano.",
+    mainIdeas: [
+      "A logoterapia e a busca por sentido",
+      "A liberdade interior em face do sofrimento",
+      "A importância de ter um propósito",
+      "A resiliência da psique humana",
+    ],
+    imageUrl: "/images/em-busca-de-sentido.png",
+    affiliateLink: "https://mercadolivre.com/sec/1hGhKcz",
+    price: "R$ 46,82",
+  },
+  {
+    id: "3", // Novo ID para este livro
+    title: "O Poder Do Subconsciente",
+    author: "Dr. Joseph Murphy",
+    description:
+      "Um guia prático para liberar o poder oculto da mente subconsciente. Dr. Joseph Murphy ensina como utilizar pensamentos e crenças para manifestar prosperidade, saúde, felicidade e relacionamentos harmoniosos em sua vida.",
+    mainIdeas: [
+      "A lei da atração e seu poder",
+      "Como programar o subconsciente para o sucesso",
+      "A cura através da mente",
+      "Libere seu potencial ilimitado",
+    ],
+    imageUrl: "/images/o-poder-do.png", // Você precisará colocar esta imagem em public/images
+    affiliateLink: "https://mercadolivre.com/sec/2g1vd1M", // Exemplo de link de afiliado, ajuste conforme o seu.
+    price: "R$ 36", // O preço que você forneceu
   },
 ];
 
@@ -142,7 +173,7 @@ export default function Home() {
                   <img
                     src={book.imageUrl}
                     alt={book.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain object-top"
                   />
                   <button
                     onClick={() => toggleFavorite(book.id)}
